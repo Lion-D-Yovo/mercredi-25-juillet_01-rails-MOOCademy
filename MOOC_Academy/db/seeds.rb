@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+10.times do |index|
+    index=Course.new(titre: Faker::GameOfThrones.house,description:Faker::GameOfThrones.quote)
+end
+
+10.times do |ind|
+    ind=Lesson.new(titre: Faker::GameOfThrones.character,body:Faker::GameOfThrones.city,cour_id:rand(1..10))
+end
